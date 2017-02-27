@@ -11,7 +11,6 @@ post '/login' do
     login(@user)
     redirect "users/#{@user.id}"
   else
-    @error = "Incorrect email or password"
     erb:'sessions/new.html'
   end
 end

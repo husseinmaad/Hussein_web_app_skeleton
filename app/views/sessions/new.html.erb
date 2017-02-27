@@ -2,9 +2,6 @@
 
 <h2>Log In</h2>
 <form id="login" method="post" action="/login">
-  <% if @error %>
-      <div class="alert">* <%= @error %>.</div>
-  <% end %>
   <p><label for="email">Email:</label><br>
     <input class="form-control" type="text" name="user[email]" >
   </p>
