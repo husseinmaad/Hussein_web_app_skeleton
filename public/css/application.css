@@ -1,0 +1,87 @@
+/*.container {
+  margin: 20px auto;
+  width: 800px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+.container h1 {
+  font-size: 17pt;
+}*/
+
+nav{
+  margin-top: 45px;
+}
+/*.content {
+  padding: 0 25px;
+}*/
+/*nav .brand, nav .brand a {
+  margin-left: 5px;
+  font-size: 18pt;
+  text-decoration: none;
+  color: #444;
+  width: 30%;
+  display: inline-block;
+}
+nav ul {
+  display: inline-block;
+  width: 60%;
+  text-align: right;
+}*/
+
+/*nav li {
+  margin-right: 25px;
+  display: inline;
+}
+nav li a {
+  color: gray;
+  text-decoration: none;
+}
+nav li a:hover {
+  text-decoration: underline;
+}
+*/
+form label {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.errors {
+  color: red;
+}
+
+form.quirks {
+  display: inline-block;
+}
+
+.submit {
+  text-align: center;
+}
+/*
+.label {
+  font-weight: bold;
+  float: left;
+  text-align: right;
+  margin-right: 20px;
+  width: 200px;
+}
+article a.vote-button {
+  color: #8C8C8C;
+  text-decoration: none;
+  display: inline;
+  vertical-align: sub;
+}*/
+
+
+
+.upvote-button {
+  background-color: transparent;
+  border: none;
+  padding-top: 5px;
+  color: #8C8C8C;
+  vertical-align: sub;
+  padding: 1px 0px 0px 0px;
+}

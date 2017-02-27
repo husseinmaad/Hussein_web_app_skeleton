@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
-  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/normalize.css?app=skills">
+  <!-- Latest compiled and minified CSS -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/application.css?app=skills">
@@ -14,14 +10,43 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js?app=skills"></script>
 
-  <link rel="stylesheet" href="/css/application.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
-
   <title></title>
 </head>
 <body>
-  <%= yield %>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="page-header">
+            <h1>Your App Name</h1>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Main Page</a></li>
+              <% if current_user %>
+                <li><a href="/users/<%= current_user.id %>">Profile</a></li>
+                <li class="logout-link"><a href="/logout">Logout</a></li>
+              <% else %>
+                <li><a href="/users/new">Sign Up</a></li>
+                <li><a href="/login">Login</a></li>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
+        </div>
+    </div>
+  </header>
+  <main class="content">
+    <div class="container">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
