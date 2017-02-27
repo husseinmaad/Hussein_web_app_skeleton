@@ -12,7 +12,6 @@ post '/users' do
     login(@user)
     redirect "users/#{@user.id}"
   else
-    @errors = @user.errors
     redirect "/users/new"
   end
 end

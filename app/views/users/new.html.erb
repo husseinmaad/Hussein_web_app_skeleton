@@ -1,16 +1,17 @@
 <h1>Sign Up</h1>
 <form id="sign-up" method="post" action="/users">
+
   <p>
     <label for="user_name">User Name:</label>
-    <input class="form-control" type="text" name="user[user_name]" value="<%= @user.try(:user_name) %>">
+    <input class="form-control" type="text" name="user[user_name]">
   </p>
   <p>
     <label for="Email">Email:</label>
-    <input class="form-control" type="text" name="user[email]" value="<%= @user.try(:email) %>">
+    <input class="form-control" type="text" name="user[email]" >
   </p>
   <p>
     <label for="password">Password:</label>
-    <input class="form-control" type="password" name="user[password]" value="<%= @user.try(:password) %>">
+    <input class="form-control" type="password" name="user[password]" >
   </p>
   <!-- BUTTON -->
   <input class="btn btn-primary" type="submit" value="Sign Up" class="button">
