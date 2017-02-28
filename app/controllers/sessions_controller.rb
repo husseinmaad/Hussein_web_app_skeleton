@@ -5,10 +5,12 @@ end
 
 # Request to login, redirect to user profile
 post '/login' do
-  @attempt = params[:user]
-  @user = User.authenticate(@attempt[:email], @attempt[:password])
+  @user_info = params[:user]
+  @user = User.authenticate(@user_info[:email], @user_info[:password])
   if @user
     login(@user)
+
+    helper_check_print("USER LOG IN" ,@user)
     redirect "users/#{@user.id}"
   else
     erb:'sessions/new.html'
