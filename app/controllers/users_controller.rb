@@ -9,6 +9,7 @@ post '/users' do
   p "="*50
   @user = User.new(params[:user])
   if @user.save
+    p @user
     login(@user)
     redirect "users/#{@user.id}"
   else
