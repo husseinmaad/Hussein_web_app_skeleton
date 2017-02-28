@@ -9,7 +9,8 @@ post '/login' do
   @user = User.authenticate(@user_info[:email], @user_info[:password])
   if @user
     login(@user)
-    p @user
+
+    helper_check_print("USER LOG IN" ,@user)
     redirect "users/#{@user.id}"
   else
     erb:'sessions/new.html'
